@@ -1,0 +1,31 @@
+{
+  "name": "tech-blog",
+  "version": "1.0.0",
+  "description": "``` * npm init -y * npm install express * npm install mysql2 * npm install sequelize  * npm install dotenv * npm install express-handlebars * npm i express-session connect-session-sequelize * npm i bcrypt * heroku create * git push heroku main * * Use JawsDB in heroku *   In the heroku project, click on the Resources tab,Underneath Add-ons, search for \"JawsDB MySQL\"",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/awolrob/tech-news.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/awolrob/tech-news/issues"
+  },
+  "homepage": "https://github.com/awolrob/tech-news#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "connect-session-sequelize": "^7.1.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.3",
+    "express-session": "^1.17.2",
+    "mysql2": "^2.3.0",
+    "sequelize": "^6.6.5"
+  }
+}
