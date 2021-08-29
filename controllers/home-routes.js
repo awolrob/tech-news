@@ -92,12 +92,15 @@ router.get('/post/:id', (req, res) => {
 });
 
 router.get('/login', (req, res) => {
+  console.log(req.body," body in login");
   if (req.session.loggedIn) {
     res.redirect('/');
     return;
   }
 
-  res.render('login');
+  res.render('login', {
+    showLoginForm: true
+  });
 });
 
 module.exports = router;

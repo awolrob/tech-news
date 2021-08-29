@@ -1,18 +1,19 @@
 <section>
-  <h2>Create New Post</h2>
-
-  <form class="new-post-form">
-    <div>
-      <label for="post-title">Title</label>
-      <input type="text" id="post-title" name="post-title" />
+  <form class="card form-input new-post-form">
+    <h2 class="card-header" style="margin: 0;">Create New Post</h2>
+    <div class="card-body">
+      <div>
+        <label for="post-title" style="display: block;">Blog Title</label>
+        <input class="form-textarea" type="text" id="post-title" name="post-title" />
+      </div>
+      <div>
+        {{!-- <label for="post-url">Link</label>
+        <input id="post-url" name="post-url" /> --}}
+        <label for="blog">Blog Post Content...</label>
+        <input class="blog-textarea" type="text" id="blog" name="blog" />
+      </div>
+      <button type="submit" class="btn">Create</button>
     </div>
-    <div>
-      {{!-- <label for="post-url">Link</label>
-      <input id="post-url" name="post-url" /> --}}
-      <label for="blog">Link</label>
-      <input type="text" id="blog" name="blog" />
-    </div>
-    <button type="submit" class="btn">Create</button>
   </form>
 </section>
 
