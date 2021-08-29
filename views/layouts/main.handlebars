@@ -4,33 +4,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Just Tech News</title>
+  <title>Tech Blog</title>
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+
   <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 
-<body>
-  <div class="wrapper">
-    <header>
-      <h1>
-        <a href="/">Just Tech News</a>
-      </h1>
-      <nav>
-        {{#if loggedIn}}
-        <a href="/dashboard">dashboard</a>
-        <button id="logout" class="btn-no-style">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}
-      </nav>
-    </header>
-    <main>
-      {{{ body }}}
-    </main>
-    <footer>
-      Thanks for visiting!
-    </footer>
-  </div>
-  
+<body class="flex-column">
+  <header class="hero">
+    <nav class="list-item justify-space-between" style="padding: 0;">
+      <a class="nav-title" href="/">Home</a>
+      <a class="nav-title" href="/dashboard">Dashboard</a>
+      {{#if loggedIn}}
+      {{else}}
+      <a class="nav-title" href="/login">Login</a>
+      {{/if}}
+      <button id="logout" class="nav-title btn-no-style">Logout</button>
+    </nav>
+    <h1 class="app-title">
+      The Tech Blog
+    </h1>
+  </header>
+  <main>
+    {{{ body }}}
+  </main>
+  <footer>
+    Thanks for visiting!
+  </footer>
+
+
   {{#if loggedIn}}
   <script src="/javascript/logout.js"></script>
   {{/if}}

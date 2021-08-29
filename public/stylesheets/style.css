@@ -33,6 +33,19 @@ h6 {
   line-height: 1.25;
 }
 
+a {
+  text-decoration: none;
+  color: var(--primary);
+  /* font-weight: bold; */
+  transition: color .1s;
+}
+
+a:hover {
+  background: none;
+  color: var(--tertiary);
+}
+
+
 main {
   margin: 20px auto;
   width: 94%;
@@ -57,6 +70,26 @@ p {
   box-shadow: 3px 3px var(--dark);
   transform: translate(-1px, -1px);
 }
+
+.btn-no-style {
+  background: none;
+  border: none;
+  /* padding: 0; */
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--primary);
+  /* font-size: 100%; */
+  /* font-weight: bold; */
+  transition: color .1s;
+  height: 33px;
+  /* margin-left: 16px; */
+}
+
+.btn-no-style:hover {
+  background: none;
+  color: var(--tertiary);
+}
+
 
  .btn:hover {
   color: var(--primary);
@@ -93,13 +126,23 @@ p {
 }
 
 .hero {
-  padding: 3% 4%;
+  padding: 1% 1%;
   background-color: var(--dark);
   color: var(--primary);
 }
 
 .hero p {
   max-width: 75%;
+}
+
+.nav-title {
+  font-size: 1.5rem;
+  background-color: var(--primary);
+  color: var(--dark);
+  padding: 0 10px;
+  /* display: inline-block; */
+  border-radius: var(--border-radius);
+  box-shadow: 6px 5px var(--light-dark);
 }
 
 .app-title {
@@ -121,14 +164,14 @@ p {
   margin-bottom: 10px;
   padding: 1.5%;
   border-radius: var(--border-radius);
-  background-color: var(--light-dark);
+  background-color: var(--dark);
   color: var(--primary);
   text-decoration: none;
 }
 
-.list-item:hover {
+/* .list-item:hover {
   background-color: var(--dark);
-}
+} */
 
 .status-icon {
   padding: 2px 5px;
