@@ -9,9 +9,20 @@
 * npm install express-handlebars
 * npm i express-session connect-session-sequelize
 * npm i bcrypt
+
 * in get bash cli
 * heroku create (result - https://lit-anchorage-72856.herokuapp.com/ & https://git.heroku.com/lit-anchorage-72856.git)
-* git push heroku main
-* 
+
 * Use JawsDB in heroku
 *   In the heroku project, click on the Resources tab,Underneath Add-ons, search for "JawsDB MySQL"
+
+* git push heroku main
+* 
+
+* in server.js change sequelize.sync({ force: true }) to false
+* git add -A
+* git push heroku main
+* heroku run bash
+* node seeds/index.js
+* exit
+
