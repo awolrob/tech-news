@@ -24,8 +24,19 @@
   <ol class="list-group">
     {{#each posts as |post|}}
     <li>
-      {{> post-info post}}
-      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a>
+      {{!-- {{> post-info post}} --}}
+      <article class="card">
+        <div class="card-header">
+          <a href="/dashboard/edit/{{post.id}}" class="btn-back">{{title}}</a>
+          <div>
+            <p style="font-size: 75%;">
+              {{vote_count}} {{format_plural "point" vote_count}} by {{user.username}} on {{format_date created_at}} |
+              {{comments.length}} {{format_plural "comment" comments.length}}
+            </p>
+          </div>
+          <p class="card-body">"{{blog}}"</p>
+      </article>
+      {{!-- <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a> --}}
     </li>
     {{/each}}
   </ol>
