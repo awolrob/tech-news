@@ -46,34 +46,14 @@ async function signupFormHandler(event) {
   }
 }
 
-// async function logout() {
-//   const response = await fetch('/api/users/logout', {
-//     method: 'post',
-//     headers: { 'Content-Type': 'application/json' }
-//   });
-
-//   if (response.ok) {
-//     document.location.replace('/');
-//   } else {
-//     alert(response.statusText);
-//   }
-// }
-
-
-// document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
 document.querySelector('.form-input').addEventListener('submit', loginFormHandler);
 document.getElementById('signUpInstead').addEventListener('click', async () => {
   document.getElementById("login-form").style.display = "none";
   document.getElementById("signup-form").style.display = "";
-  console.log("Hello World - I need to sign up");
-
 });
 
 document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
 document.getElementById('loginInstead').addEventListener('click', async () => {
   document.getElementById("login-form").style.display = "";
   document.getElementById("signup-form").style.display = "none";
-
-  console.log("Hello World - I'd rather log on");
-
 });

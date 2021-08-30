@@ -1,5 +1,5 @@
 <article>
-  <a href="/dashboard"> &larr; Back to dashboard</a>
+  <a href="/dashboard"> &larr; Back To Dashboard</a>
   <form class="card form-input edit-post-form">
     <h2 class="card-header" style="margin: 0;">Edit Post</h2>
     <div class="card-body">
@@ -10,17 +10,14 @@
       <div>
         <label for="blog">Blog Post Content...</label>
         <textarea class="blog-textarea" name="blog" type="text" id="blog">{{post.blog}}</textarea>
-
-        {{!-- <span>({{format_url post.post_url}})</span> --}}
-        {{!-- <span>({{post.blog}})</span> --}}
       </div>
       <div>
         {{post.vote_count}} {{format_plural "point" post.vote_count}} by you on {{format_date post.created_at}}
         |
         <a href="/post/{{post.id}}">{{post.comments.length}} {{format_plural "comment" post.comments.length}}</a>
       </div>
-      <button class="btn" type="submit">Save post</button>
-      <button type="button" class="delete-post-btn btn">Delete post</button>
+      <button class="btn" type="submit">Save Post</button>
+      <button type="button" class="delete-post-btn btn">Delete Post</button>
     </div>
   </form>
 </article>
@@ -29,4 +26,3 @@
 
 <script src="/javascript/edit-post.js"></script>
 <script src="/javascript/delete-post.js"></script>
-{{!-- <script src="/javascript/comment.js"></script> --}}

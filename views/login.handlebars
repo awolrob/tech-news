@@ -1,43 +1,42 @@
-{{!-- <form class="login-form"> --}}
-  <form class="card form-input" id="login-form">
+<form class="card form-input" id="login-form">
+  <div>
+    <p class="card-header" style="margin: 0;">Login</p>
+  </div>
+  <div class="card-body">
     <div>
-      <p class="card-header" style="margin: 0;">Login</p>
+      <label for="username-login">Username (email)</label>
+      <input class="form-textarea" type="text" id="username-login" />
     </div>
-    <div class="card-body">
-      <div>
-        <label for="username-login">Username (email)</label>
-        <input class="form-textarea" type="text" id="username-login" />
-      </div>
-      <div>
-        <label for="password-login">Password</label>
-        <input class="form-textarea" type="password" id="password-login" />
-      </div>
-      <div>
-        <button class="btn" type="submit">login</button>
-      </div>
-    </div>
-    <button id="signUpInstead" class="btn-no-style">Sign Up Instead</button>
-  </form>
-
-  <form class="card signup-form" id="signup-form" style="display: none;">
     <div>
-      <p class="card-header" style="margin: 0;">Sign Up</p>
+      <label for="password-login">Password</label>
+      <input class="form-textarea" type="password" id="password-login" />
     </div>
-    <div class="card-body">
-      <div>
-        <label for="username-signup">Username (email)</label>
-        <input class="form-textarea" type="text" id="username-signup" />
-      </div>
-      <div>
-        <label for="password-signup">Password</label>
-        <input class="form-textarea" type="password" id="password-signup" />
-      </div>
-      <div>
-        <button class="btn" type="submit">signup</button>
-      </div>
+    <div>
+      <button class="btn" type="submit">Login</button>
     </div>
-    <button id="loginInstead" class="btn-no-style" type="button">Login Instead</button>
-  </form>
+  </div>
+  <button id="signUpInstead" class="btn-no-style">Sign Up Instead</button>
+</form>
+
+<form class="card signup-form" id="signup-form" style="display: none;">
+  <div>
+    <p class="card-header" style="margin: 0;">Sign Up</p>
+  </div>
+  <div class="card-body">
+    <div>
+      <label for="username-signup">Username (email)</label>
+      <input class="form-textarea" type="text" id="username-signup" />
+    </div>
+    <div>
+      <label for="password-signup">Password</label>
+      <input class="form-textarea" type="password" id="password-signup" />
+    </div>
+    <div>
+      <button class="btn" type="submit">Signup</button>
+    </div>
+  </div>
+  <button id="loginInstead" class="btn-no-style" type="button">Login Instead</button>
+</form>
 
 
-  <script src="/javascript/login.js"></script>
+<script src="/javascript/login.js"></script>

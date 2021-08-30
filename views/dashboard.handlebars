@@ -7,8 +7,6 @@
         <textarea class="form-textarea" type="text" id="post-title" name="post-title"></textarea>
       </div>
       <div>
-        {{!-- <label for="post-url">Link</label>
-        <input id="post-url" name="post-url" /> --}}
         <label for="blog">Blog Post Content...</label>
         <textarea class="blog-textarea" type="text" id="blog" name="blog"></textarea>
       </div>
@@ -24,7 +22,6 @@
   <ol class="list-group">
     {{#each posts as |post|}}
     <li>
-      {{!-- {{> post-info post}} --}}
       <article class="card">
         <div class="card-header">
           <a href="/dashboard/edit/{{post.id}}" class="btn-back">{{title}}</a>
@@ -36,7 +33,6 @@
           </div>
           <p class="card-body">"{{blog}}"</p>
       </article>
-      {{!-- <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit post</a> --}}
     </li>
     {{/each}}
   </ol>
