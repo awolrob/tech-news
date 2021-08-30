@@ -17,7 +17,8 @@
 *   In the heroku project, click on the Resources tab,Underneath Add-ons, search for "JawsDB MySQL"
 
 * git push heroku main
-* 
+* package.json scripts:    "heroku-postbuild": "node seeds/index.js"
+
 
 * in server.js change sequelize.sync({ force: true }) to false
 * git add -A
