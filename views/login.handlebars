@@ -1,5 +1,5 @@
 {{!-- <form class="login-form"> --}}
-  <form class="card form-input" {{#if showLoginForm }} {{ else }} style="display: none;" {{/if}}>
+  <form class="card form-input" id="login-form">
     <div>
       <p class="card-header" style="margin: 0;">Login</p>
     </div>
@@ -19,7 +19,7 @@
     <button id="signUpInstead" class="btn-no-style">Sign Up Instead</button>
   </form>
 
-  <form class="card signup-form" {{#if showLoginForm }} style="display: none;" {{/if}}>
+  <form class="card signup-form" id="signup-form" style="display: none;">
     <div>
       <p class="card-header" style="margin: 0;">Sign Up</p>
     </div>

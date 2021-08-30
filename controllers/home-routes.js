@@ -98,9 +98,7 @@ router.get('/login', (req, res) => {
     return;
   }
 
-  res.render('login', {
-    showLoginForm: true
-  });
+  res.render('login');
 });
 
 module.exports = router;

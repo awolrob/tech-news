@@ -28,7 +28,7 @@ async function signupFormHandler(event) {
   const username = document.querySelector('#username-signup').value.trim();
   const password = document.querySelector('#password-signup').value.trim();
 
-  if (username &&  password) {
+  if (username && password) {
     const response = await fetch('/api/users', {
       method: 'post',
       body: JSON.stringify({
@@ -63,16 +63,17 @@ async function signupFormHandler(event) {
 // document.querySelector('.login-form').addEventListener('submit', loginFormHandler);
 document.querySelector('.form-input').addEventListener('submit', loginFormHandler);
 document.getElementById('signUpInstead').addEventListener('click', async () => {
+  document.getElementById("login-form").style.display = "none";
+  document.getElementById("signup-form").style.display = "";
   console.log("Hello World - I need to sign up");
-
-    showLoginForm: false
 
 });
 
 document.querySelector('.signup-form').addEventListener('submit', signupFormHandler);
 document.getElementById('loginInstead').addEventListener('click', async () => {
-  console.log("Hello World - I'd rather log on");
+  document.getElementById("login-form").style.display = "";
+  document.getElementById("signup-form").style.display = "none";
 
-    showLoginForm: true
+  console.log("Hello World - I'd rather log on");
 
 });

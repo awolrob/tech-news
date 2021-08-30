@@ -1,26 +1,27 @@
 <section>
-  <form class="card form-input new-post-form">
+  <form class="card form-input new-post-form" id="post-form" style="display: none;">
     <h2 class="card-header" style="margin: 0;">Create New Post</h2>
     <div class="card-body">
       <div>
         <label for="post-title" style="display: block;">Blog Title</label>
-        <input class="form-textarea" type="text" id="post-title" name="post-title" />
+        <textarea class="form-textarea" type="text" id="post-title" name="post-title"></textarea>
       </div>
       <div>
         {{!-- <label for="post-url">Link</label>
         <input id="post-url" name="post-url" /> --}}
         <label for="blog">Blog Post Content...</label>
-        <input class="blog-textarea" type="text" id="blog" name="blog" />
+        <textarea class="blog-textarea" type="text" id="blog" name="blog"></textarea>
       </div>
       <button type="submit" class="btn">Create</button>
     </div>
   </form>
 </section>
+<button type="submit" id="new-post" class="btn">+ New Post</button>
 
 {{#if posts.length}}
 <section>
   <h2>Your Posts</h2>
-  <ol>
+  <ol class="list-group">
     {{#each posts as |post|}}
     <li>
       {{> post-info post}}

@@ -2,12 +2,19 @@
   <div class="card-header">
     {{!-- <a href="{{post_url}}" target="_blank">{{title}}</a>
     <span>({{format_url post_url}})</span> --}}
-    <p "{{blog}}">{{title}}</p>
-    <span>"{{blog}}"</span>
+    <a href="/post/{{id}}" class="btn-back">{{title}}</a>
+    <div>
+      <p style="font-size: 75%;">
+        {{vote_count}} {{format_plural "point" vote_count}} by {{user.username}} on {{format_date created_at}} |
+        {{comments.length}} {{format_plural "comment" comments.length}}
+      </p>
+    </div>
+    <p class="card-body">"{{blog}}"</p>
+    {{!--
   </div>
   <div class="card-body">
     {{vote_count}} {{format_plural "point" vote_count}} by {{user.username}} on {{format_date created_at}}
     |
-    <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a>
-  </div>
+    <p>{{comments.length}} {{format_plural "comment" comments.length}}</p>
+  </div> --}}
 </article>

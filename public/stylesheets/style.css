@@ -41,11 +41,6 @@ a:hover {
   color: var(--tertiary);
 }
 
-main {
-  margin: 20px auto;
-  width: 35%;
-}
-
 p {
   font-size: 1.2rem;
 }
@@ -117,13 +112,22 @@ p {
   color: var(--primary);
   background-color: var(--tertiary);
   transform: translate(0, 0);
-  box-shadow: 2px 2px var(--dark);
+  /* box-shadow: 2px 2px var(--dark); */
+}
+
+.edit-link {
+  display: block;
+  margin: -1.5% 0 2% 0;
 }
 
 .hero {
   padding: 1% 1%;
   background-color: var(--dark);
   color: var(--primary);
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  align-items: center;
 }
 
 .hero p {
@@ -131,6 +135,7 @@ p {
 }
 
 .nav-title {
+  margin-right: 5px;
   font-size: 1.5rem;
   background-color: var(--primary);
   color: var(--dark);
@@ -152,7 +157,7 @@ p {
 
 .list-group {
   padding: 0;
-  /* list-style: none; */
+  list-style: none;
 }
 
 .list-item {
@@ -164,15 +169,34 @@ p {
   text-decoration: none;
 }
 
-/* .list-item:hover {
-  background-color: var(--dark);
-} */
+.list-item:hover {
+  background-color: yellow;
+}
 
 .status-icon {
   padding: 2px 5px;
   margin: 0 5px;
   background-color: rgba(255, 255, 255, 1);
   border-radius: var(--border-radius);
+}
+
+.comment-form {
+  margin-bottom: 5%;
+}
+
+.comment {
+  padding: 1%;
+  margin-bottom: 1%;
+}
+
+.comment:nth-child(odd) {
+  background-color: #fff5eb;
+}
+
+.comment .meta {
+  font-size: 90%;
+  margin-bottom: .5%;
+  opacity: .6;
 }
 
 .icon-danger {
@@ -183,12 +207,14 @@ p {
   color: rgb(29, 153, 255);
 }
 
+
 /* CARDS */
 
 .card {
   margin: 0 0 20px 0;
   border: 3px solid var(--dark);
   border-radius: var(--border-radius);
+  width: 100%;
 }
 
 .card-header {
@@ -203,6 +229,10 @@ p {
   padding-left: 2.5%;
   padding-top: .5%;
   padding-bottom: 0.5%;
+  background-color: var(--primary);
+  border: 3px solid var(--secondary);
+  border-radius: calc(.18rem - 1px) calc(.18rem - 1px) 0 0;
+  color: #000;
 }
 
 /* FORM */
@@ -212,21 +242,22 @@ p {
 }
 
 .form-textarea {
-  
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-  
+  width: 100%;
+  height: 50px;
+  padding: 5px 5px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  resize: none;
 }
 
 .blog-textarea {
   width: 100%;
   height: 150px;
-  padding: 12px 20px;
+  padding: 5px 5px;
   box-sizing: border-box;
   border: 2px solid #ccc;
   border-radius: 4px;
@@ -234,9 +265,16 @@ p {
   font-size: 16px;
   resize: none;
 }
+
 .form-label {
   font-size: 1.1rem;
   margin: 0 0 0 5px;
+}
+
+textarea, input {
+  padding: .5%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
 
 .form-input, .signup-form {
