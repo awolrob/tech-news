@@ -36,7 +36,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(require('./controllers/'));
 
 //initalize database; then seed 
-// sequelize.sync({ force: true }).then(() => {
-sequelize.sync({ force: false }).then(() => {
+sequelize.sync({ force: true }).then(() => {
+// sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log(`Now listening  ${PORT}`));
 });
